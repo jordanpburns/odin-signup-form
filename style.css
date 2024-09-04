@@ -1,0 +1,102 @@
+.container {
+    border: 1px solid black;
+}
+
+#main-container {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+#left-container {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    align-items: stretch;
+    position: relative;
+    height: 100vh;
+    max-width: 40wh;
+    z-index: -1;
+}
+
+#right-container {
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+    align-items: stretch;
+}
+
+#header {
+    flex: 5;
+}
+
+#form-container {
+    flex: 3;
+    display: flex;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+#name-form-row {
+    display: flex;
+}
+
+#email-phone-form-row {
+    display: flex;
+}
+
+#password-form-row {
+    display: flex;
+}
+
+#submit-container {
+    flex: 4;
+}
+
+#background-image {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+}
+
+#odin-header {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    opacity: .75;
+    color: white;
+    top: 25%;
+    width: 100%;
+    height: 15%;
+    text-align: center;
+    z-index: 1;
+    font-size: 30px;
+}
+
+#odin {
+    object-fit: contain;
+    height: 100%;
+}
+
+#image-credit {
+    position: absolute;
+    color: white;
+    bottom: 2%;
+    text-align: center;
+    width: 100%;
+}
+
+button {
+    background-color: #596D48;
+    color: white;
+}
+
+a {
+    color: white;
+}
+
