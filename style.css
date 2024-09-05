@@ -1,6 +1,23 @@
-.container {
-    border: 1px solid black;
+@font-face {
+    font-family: 'norsebold';
+    src: url('./fonts/norse-bold-webfont.woff2') format('woff2'),
+         url('./fonts/norse-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
 }
+
+html {
+    font-family:"norsebold", Arial, Helvetica, sans-serif;
+    --non-norse-font: Helvetica;
+}
+
+.border {
+    background-color: black;
+    flex: 1;
+}
+
+/* General page layout and containers */
 
 #main-container {
     display: flex;
@@ -10,7 +27,7 @@
 #left-container {
     display: flex;
     flex-direction: column;
-    flex: 2;
+    flex: 3;
     align-items: stretch;
     position: relative;
     height: 100vh;
@@ -21,22 +38,83 @@
 #right-container {
     display: flex;
     flex-direction: column;
-    flex: 3;
+    flex: 5;
     align-items: stretch;
 }
 
 #header {
-    flex: 5;
+    flex: 4;
+    padding: 32px;
+    font-size: 18px;
+    background-color: #F8F8F8;
+    font-weight: bold;
+}
+
+#header-text {
+    font-family: var(--non-norse-font);
+    position: relative;
+    top: 40%;
 }
 
 #form-container {
     flex: 3;
     display: flex;
+    padding: 8px;
+    box-shadow: 0 5px 10px rgba(107, 112, 130, 0.15), 0 15px 40px rgba(102, 106, 120, 0.2);
+}
+
+/* FORM */
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  width: 250px;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 0.5px solid lightgray;
+}
+
+label {
+    font-size: 12px;
+}
+
+button {
+    font-family: var(--non-norse-font);
+    font-size: 13px;
+    font-weight: 700;
+    padding: 14px;
+    margin: 16px;
+    box-shadow: 0 5px 10px rgba(107, 130, 111, 0.35);
+    border-radius: 8px;
+    background-color: #596D48;
+    color: white;
 }
 
 form {
     display: flex;
     flex-direction: column;
+    font-family: var(--non-norse-font);
+}
+
+input:invalid {
+    border: 1px solid rgb(196, 7, 7);
+}
+
+input:empty {
+    border: 0.5px solid lightgray;
+}
+
+input {
+    padding: 3px;
+}
+
+input:focus {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
 }
 
 #name-form-row {
@@ -51,9 +129,18 @@ form {
     display: flex;
 }
 
+.input-container {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+}
+
 #submit-container {
     flex: 4;
+    padding: 16px;
 }
+
+/* Image and banner on left side */
 
 #background-image {
     object-fit: cover;
@@ -75,7 +162,8 @@ form {
     height: 15%;
     text-align: center;
     z-index: 1;
-    font-size: 30px;
+    font-size: 38px;
+    padding: 4px 0px;
 }
 
 #odin {
@@ -84,16 +172,13 @@ form {
 }
 
 #image-credit {
+    font-family: sans-serif;
     position: absolute;
     color: white;
     bottom: 2%;
     text-align: center;
     width: 100%;
-}
-
-button {
-    background-color: #596D48;
-    color: white;
+    font-size: 14px;
 }
 
 a {
